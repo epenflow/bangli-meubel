@@ -1,4 +1,4 @@
-import { TProduct } from '../../product/page';
+import { TProduct } from '@/app/type';
 import setPrice, { setDiscount } from '../../utils/setPrice';
 export default function ProductCard({
 	brand,
