@@ -1,5 +1,6 @@
 'use client';
-import { TProduct } from '@/app/product/page';
+
+import { TProduct } from '@/app/type';
 import React from 'react';
 
 export default function DetailCard({ title, description }: TProduct) {
@@ -9,7 +10,7 @@ export default function DetailCard({ title, description }: TProduct) {
 		console.info(isActive);
 	};
 	return (
-		<section className='sm:w-[586px] border-solid border-[2px] border-gray-300 p-4 flex flex-col gap-2 box-content'>
+		<section className='sm:w-[586px] border-solid border-[2px] border-gray-300 p-2 flex flex-col gap-2 box-border'>
 			<h1 className='capitalize text-3xl font-bold text-gray-500'>
 				{title}
 			</h1>

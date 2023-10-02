@@ -1,5 +1,5 @@
 'use client';
-import { TProduct } from '@/app/product/page';
+import { TProduct } from '@/app/type';
 import setPrice, { setDiscount } from '@/app/utils/setPrice';
 import React from 'react';
 
@@ -7,7 +7,7 @@ export default function OrderCard({ price, discountPercentage }: TProduct) {
 	const [cart, setCart] = React.useState(1);
 
 	return (
-		<section className='w-[320px] h-[240px] border-solid border-[2px] border-gray-300 flex flex-col p-5 gap-2 justify-center relative'>
+		<section className='sm:w-[310px] h-[240px] border-solid border-[2px] border-gray-300 flex flex-col p-5 gap-2 justify-center relative box-border'>
 			<div className='bg-black absolute top-0 right-0 p-2 text-white text-xs flex'>
 				{discountPercentage}%
 			</div>

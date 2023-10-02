@@ -1,31 +1,13 @@
 import { type } from 'os';
 import ProductCard from '../components/product/ProductCard';
 import Link from 'next/link';
+import { IProduct } from '../type';
 async function getProduct() {
 	const res = fetch('https://dummyjson.com/products');
 	if (!res) {
 		throw new Error('failed to fetch data');
 	}
 	return (await res).json();
-}
-export type TProduct = {
-	id: number;
-	title: string;
-	description: string;
-	price: number;
-	discountPercentage: number;
-	rating: number;
-	stock: number;
-	brand: string;
-	category: string;
-	thumbnail: string;
-	images: string[];
-};
-export interface IProduct {
-	products: Array<TProduct>;
-	total: number;
-	skip: number;
-	limit: number;
 }
 
 export default async function Page() {
